@@ -70,19 +70,16 @@ class Pizzeria {
         
     }
 }
- // немного не понял, как все правильно реализовать, чтобы создать экземпляр класса Pizzeria не  передавая туда хотябы один объект пиццы, поэтому сделал через костыль
-
-// Массив задается в инициализаторе - как это реализовать?
-
-// Прошу Вас показать правильное решение. ОЧЕНЬ хочу во всем разобраться
-
-var pizza = Pizza(cost: 100, typesPizza: .calzone, additives: .cheese, dough: .thick)
 
 
+//var arrrr = [Pizza]()
+//var cafe1 = Pizzeria(pizzaArray: arrrr)
 
-var cafe1 = Pizzeria(pizzaArray: [pizza])
+var cafe1 = Pizzeria(pizzaArray: [])
+
 cafe1.addPizza(typesOfPizza: .fritta, additives: .pepperoni, dough: .thin, cost: 120)
 cafe1.addPizza(typesOfPizza: .napoletana, additives: .cheese, dough: .thick, cost: 130)
+cafe1.addPizza(typesOfPizza: .siciliana, additives: .tomato, dough: .thick, cost: 100)
 cafe1.availableForPurchase()
 
 
