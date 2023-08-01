@@ -43,12 +43,17 @@ struct Pizza {
 
 
 class Pizzeria {
-    private var pizzaArray: [Pizza] = []
+    private var pizzaArray: [Pizza]
     
     
     init (pizzaArray: [Pizza]) {
         self.pizzaArray = pizzaArray
     }
+    
+    init() {
+        self.pizzaArray = []
+    }
+    
     
     
     
@@ -58,7 +63,7 @@ class Pizzeria {
                   cost: Int){
         
         var p = Pizza(cost: cost, typesPizza: typesOfPizza, additives: additives, dough: dough)
-        pizzaArray.append(p)
+        self.pizzaArray.append(p)
     }
     
     
@@ -76,6 +81,11 @@ class Pizzeria {
 //var cafe1 = Pizzeria(pizzaArray: arrrr)
 
 var cafe1 = Pizzeria(pizzaArray: [])
+var cafe2 = Pizzeria()
+
+
+
+
 
 cafe1.addPizza(typesOfPizza: .fritta, additives: .pepperoni, dough: .thin, cost: 120)
 cafe1.addPizza(typesOfPizza: .napoletana, additives: .cheese, dough: .thick, cost: 130)
